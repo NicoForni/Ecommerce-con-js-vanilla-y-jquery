@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="estilos.css">
+       
+           <!-- jquery -->
+           <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+           integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+           <!-- jQuery Modal -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+            defer />
+  
+          <!-- SWAL2 https://sweetalert2.github.io/ -->
+          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+         
+    </head>
+
+    <body>
+        
+        <!--HEADER MENU-->
+        <header>
+            <nav>
+                <ul class="nav-menu">
+                    <img class="logo" src="./assets/logo-pc.svg" alt="" width="" height="">
+                    <div class="texto-de-menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>                        
+                    </div>
+                    <input class="buscadorcito" id="buscador" type="text" placeholder="Escriba una marca">
+                    <button class="botoncito" id="boton" type="submit">Buscar...</button>
+                    <div class="carrito-contenedor"><a href="#modal" rel="modal:open"><img src="./assets/carrito.png" alt="Carrito Icono"></a></div>
+                </ul>
+            </nav>            
+        </header>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal">
+            <div class="contenedor-de-carrito">
+                <h3>Productos en el carrito</h3>
+                <table>
+                    <div id="contenedor-columna">                    
+                        <div id="contenedor-de-productos">
+                            <!--ACA SE ALMACENAN PRODUCTOS AÑADIDOS AL CARRITO-->
+                        </div>                
+                        <div id="contenedor-de-cantidad">
+                            <!--ACA SE ALMACENAN CANTIDADES AÑADIDAS AL CARRITO-->
+                        </div>                
+                        <div id="contenedor-de-precios">
+                            <!--ACA SE ALMACENAN PRECIOS AÑADIDOS AL CARRITO-->
+                        </div>
+                        <div id="contenedor-de-eliminar">
+                            <!--ACA SE ALMACENA BOTON "ELIMINAR" PARA QUITAR AÑADIDOS AL CARRITO-->
+                        </div>                    
+                    </div>
+                        <br>
+                        <div id="total">
+                            <!--ACA VA EL TOTAL DEL CARRITO-->
+                        </div>
+                        <br>
+                        <div class="mover-boton-comprar">
+                            <button class="botoncito-comprar" id="boton-comprar" type="submit">COMPRAR</button>
+                        </div>
+                </table>
+                <a href="#" rel="modal:close"><button>Cerrar</button></a>
+            </div>   
+        </div>
+
+
+        
+
+        <!--SUCURSALES-->
+        <br>
+        <div class="titulo-de-sucursales">
+            <h2>Donde podés encontrarnos</h2>
+        </div>
+        <div id="contenedor-sucursales">            
+       <!--ACA IMPACTAN LAS SUCURSALES DEL ARCHIVO SUCURSALES JS-->
+        </div>
+
+        <!--ENCABEZADO DE FILTROS-->
+        <br>
+        <div class="titulo-de-filtros">
+            <h3>HAGA CLICK PARA FILTRAR LOS PRODUCTOS</h3>
+        </div>
+
+        <!--SECCION FILTROS-->
+
+        <div class="contenedor-categorias" id="botones">
+            <div class="procesadores-intel">
+                <button id="clase-de-intel" data-prod="intel" type="submit">Intel</button>
+            </div>
+            <div class="procesadores-amd">
+                <button id="clase-de-amd" data-prod="amd" type="submit">Amd</button>
+            </div>
+            <div class="placas-geforce">
+                <button id="clase-de-geforce" data-prod="geforce" type="submit">Geforce</button>
+            </div>
+            <div class="placas-radeon">
+                <button id="clase-de-radeon" data-prod="radeon" type="submit">Radeon</button>
+            </div>
+            <div class="todos-productos">
+                <button id="clase-de-todos" data-prod="todos" type="submit">Todos los productos</button>
+            </div>
+        </div>
+
+        <!--CONTENEDOR DE PRODUCTOS "FILTRADOS"-->
+        <section id="productos-filtrados" class="contenedor-flex"></section>
+
+        
+
+          <!--===========ARCHIVOS JAVASCRIPT================-->
+            <script src="/js/evento.js"></script>
+            <script src="/js/carrito.js"></script>
+            <script src="/js/sucursales.js"></script>
+
+     
+
+    </body>
+
+</html>

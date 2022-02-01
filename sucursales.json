@@ -1,0 +1,24 @@
+{
+	"sucursales": [
+		{
+			"id": 0,
+			"nombre": "Buenos Aires",			
+			"imagen": "buenos-aires-0"
+		},
+		{
+			"id": 1,
+			"nombre": "San Luis",			
+			"imagen": "san-luis-1"
+		},
+		{
+			"id": 2,
+			"nombre": "Chubut",			
+			"imagen": "chubut-2"
+		},
+		{
+			"id": 3,
+			"nombre": "Jujuy",			
+			"imagen": "jujuy-3"
+		}
+	]
+}
